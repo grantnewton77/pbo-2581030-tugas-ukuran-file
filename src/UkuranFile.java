@@ -41,7 +41,7 @@ public class UkuranFile {
         System.out.println();
 
         System.out.printf("Selisih pembulatan: %.1f%n", selisihPembulatan);
-
+        System.out.println("Dibulatkan ke MB : " + dibulatkanMB);
 
     }
 }
