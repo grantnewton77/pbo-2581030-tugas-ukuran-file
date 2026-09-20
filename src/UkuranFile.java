@@ -12,8 +12,7 @@ public class UkuranFile {
         // Menggunakan 1024.0 agar pembagian menghasilkan nilai pecahan (double), bukan pembagian bilangan bulat.
         final double SATU_KB = 1024.0;
 
-        System.out.print("Nama file    : ");
-        String namaFile = input.nextLine();
+
 
         System.out.print("Ukuran (byte): ");
         long ukuranByte = input.nextLong();
@@ -26,19 +25,21 @@ public class UkuranFile {
         // Casting double ke int membuang angka di belakang koma.
         int dibulatkanMB = (int) ukuranMB;
 
-
+        // Menghitung selisih angka asli dengan hasil casting.
+        double selisihPembulatan = ukuranMB - dibulatkanMB;
 
         // Menampilkan hasil
         System.out.println();
         System.out.println("===== UKURAN FILE =====");
-        System.out.println(namaFile);
+
         System.out.println(ukuranByte + " byte");
         System.out.printf("%.1f KB%n", ukuranKB);
         System.out.printf("%.1f MB%n", ukuranMB);
         System.out.printf("%.1f GB%n", ukuranGB);
 
         System.out.println();
-        System.out.println("Dibulatkan ke MB : " + dibulatkanMB);
+
+        System.out.printf("Selisih pembulatan: %.1f%n", selisihPembulatan);
 
 
     }
